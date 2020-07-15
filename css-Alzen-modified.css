@@ -109,12 +109,21 @@ em {
 }
 /* 标题样式 */
 .rm-level1 div, .rm-level1 textarea {
-    font-size: 17px !important;
-    color:#101010!important;
+    font-family: "微软雅黑", Times, serif !important;
+    font-size: 15px !important;
+    font-weight: normal !important;
+    color: #101010!important;
     line-height: 1.5 !important;
-   font-weight:bold;
+    text-shadow: 0px 0px 0px #c6c0c0;
+
 }
 .rm-level2 div, .rm-level2 textarea {
+      font-size: 18px !important;
+    line-height: 1.5 !important;
+  color:#161617!important;
+      font-weight: bold !important;
+}
+.rm-level3 div, .rm-level3 textarea {
       font-size: 16px !important;
     line-height: 1.5 !important;
   color:#161617!important;
