@@ -108,28 +108,6 @@ em {
   cursor: pointer;
 }
 /* 标题样式 */
-.rm-level1 div, .rm-level1 textarea {
-    font-family: "微软雅黑", Times, serif !important;
-    font-size: 15px !important;
-    font-weight: normal !important;
-    color: #101010!important;
-    line-height: 1.5 !important;
-    text-shadow: 0px 0px 0px #c6c0c0;
-
-}
-.rm-level2 div, .rm-level2 textarea {
-      font-size: 18px !important;
-    line-height: 1.5 !important;
-  color:#161617!important;
-      font-weight: bold !important;
-}
-.rm-level3 div, .rm-level3 textarea {
-      font-size: 16px !important;
-    line-height: 1.5 !important;
-  color:#161617!important;
-    border-left: 4px solid #4CAF50;
-    padding-left:7px;
-}
 
 /* 标签设计 */
 span.rm-page-ref[data-tag="todo"] {
