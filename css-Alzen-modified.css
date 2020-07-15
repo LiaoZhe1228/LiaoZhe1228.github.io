@@ -112,13 +112,14 @@ em {
     font-size: 17px !important;
     color:#101010!important;
     line-height: 1.5 !important;
-
+   font-weight:bold;
 }
 .rm-level2 div, .rm-level2 textarea {
-      font-size: 17px !important;
+      font-size: 16px !important;
     line-height: 1.5 !important;
   color:#161617!important;
-
+    border-left: 4px solid #4CAF50;
+    padding-left:7px;
 }
 
 /* 标签设计 */
@@ -271,6 +272,15 @@ canvas[data-id="layer2-node"] {
 .starred-pages-wrapper > div:first-child {
     margin-top: 9px !important;
     background-color: rgba(0,0,0,0) !important;
+}
+
+.rm-level1 div, .rm-level1 textarea {
+    font-family: "微软雅黑", Times, serif !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    color: #101010!important;
+    line-height: 1.5 !important;
+   text-shadow: 0px 0px 0px #c6c0c0;
 }
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
   background-color: #CFD0D2;
