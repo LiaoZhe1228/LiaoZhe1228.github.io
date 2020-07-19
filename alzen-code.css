@@ -1467,3 +1467,196 @@ canvas[data-id="layer2-node"] {
     font-weight:normal;
 	border-bottom:1.3px solid;
 }
+
+/* HIDE LOGO*/
+#roam-sidebar-logo {
+    display: none;
+}
+
+.roam-sidebar-content * {
+    color: var(--icon-color) !important;
+}
+
+.starred-pages > a > .page:hover {
+    background-color: transparent !important;
+    color: rgb(var(--primary-color)) !important;
+}
+.log-button * {
+    /* this did not do what I expected */
+    /* but it accomplished what I wanted */
+    color: rgb(var(--primary-color)) !important;
+}
+.log-button {
+    background: none !important;
+}
+.log-button:hover, .log-button:hover * {
+    color: var(--text-color) !important;
+}
+.roam-sidebar-content {
+    color: var(--text-color) !important;
+}
+
+
+.roam-topbar {
+    opacity: 1 !important;
+    background-color: transparent !important;
+    
+    margin-top: 70px;
+    width: 20px;
+    display: inline-block;
+    padding-left: 0 !important;
+    position: relative !important;
+    
+    position: sticky !important;
+    left: 0px;
+    transition: none !important;
+    z-index: 999;
+    
+    border: none !important;
+}
+.roam-sidebar-container > .roam-sidebar-content::before {
+    content: "";
+    position: absolute;
+    top: -70px; right: -68px;
+    width: 400px;
+    height: 100vh;
+    background: var(--bg-color) !important;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.roam-sidebar-container {
+    border: none !important;
+    top: 0px !important;
+    padding: 70px 68px 50px 0px;
+
+    visibility: hidden; /* hide background */
+    transition: all .25s ease-out;
+    width: 300px !important;
+    backdrop-filter: blur(5px);
+    background: #000000 !important;
+
+    /* fix scrolling */
+    overflow-y: auto;
+}
+
+.roam-sidebar-container > .roam-sidebar-content {
+    display: block !important;
+    height: auto !important;
+    visibility: visible; /* show contents */
+}
+.roam-sidebar-container > .roam-sidebar-content > * {
+    opacity: 0 !important;
+    transition: opacity .6s ease-out !important
+}
+.roam-sidebar-container:not([style*="top: 0px"]) {
+    left: -245px !important;
+}
+.roam-sidebar-container[style*="top: 0px"] > .roam-sidebar-content > * {
+    opacity: 1 !important;
+}
+.roam-sidebar-container[style*="top: 0px"] + .roam-main {
+    padding-left: 250px;
+}
+
+/* separator between "ALL PAGES" and "SHORTCUTS" */
+.starred-pages-wrapper > div[style*="background"] {
+    background: var(--icon-color) !important;
+    opacity: 0.5;
+  }
+
+
+/* fix height with absolute positioning of email address */
+.roam-sidebar-content > .flex-h-box {
+    height: 40px;
+}
+.roam-sidebar-content > .flex-h-box > * {
+    pointer-events: auto;
+} 
+.roam-sidebar-content > .flex-h-box ~ * {
+    pointer-events: all;
+}
+.roam-sidebar-content > .flex-h-box > .flex-h-box {
+    position: absolute;
+    left: 45px;
+    top: 5px;
+}
+
+.roam-topbar > .flex-h-box {
+    width: 50px;
+    flex-direction: column;
+    height: 1px !important;
+    align-items: start !important;
+    text-align: center;
+    
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    left: 0px;
+}
+.roam-topbar > .flex-h-box > * {
+    flex: 0 0 20px !important;
+    margin: auto !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+}
+.roam-topbar > div >.bp3-button:first-child {
+    align-self: start !important;
+    position: fixed !important;
+    left: 16px;
+    top: 78px;
+    z-index: 9999999 !important;
+}
+.roam-topbar > div > *:nth-child(2) {
+    margin-top:20px !important;
+}
+
+
+
+
+
+.rm-reference-item {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+}
+
+.rm-ref-page-view-title a {
+    color: #000000;
+    font-weight: bold;
+}
+
+/* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS */
+
+.roam-topbar .bp3-icon-search {
+    padding: 4px;
+    border-radius: 3px;
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+/* style contains `200px` if search bar is NOT selected */
+/* hovering search bar in this mode == hovering icon itself */
+/* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
+/* very hacky :P */
+.rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .roam-topbar .bp3-icon-search:hover {
+    background-color: rgba(var(--color-primary), 0.4);
+    color: var(--text-color) !important;
+}
+.roam-topbar .bp3-icon-search svg { padding: 1px; }
+/* fix centering on calendar icon */
+.roam-topbar .bp3-icon-calendar { margin: 0 !important }
+
+.rm-find-or-create-wrapper {
+    width: 20px !important;
+}
+.rm-find-or-create-wrapper .bp3-overlay {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 325px);
+    width: 650px;
+}
+
+.roam-body-main {
+    display: block;
+}
