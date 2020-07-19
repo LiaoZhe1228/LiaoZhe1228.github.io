@@ -1,0 +1,127 @@
+@import url('https://LiaoZhe1228.github.io/alzen代码.css');
+
+.starred-pages > a > .page:hover {
+    background-color: rgba(187,104,104,0.63) !important;
+    color: rgba(19,132,83,0.63)(var(--primary-color)) !important;
+}
+.log-button * {
+    /* this did not do what I expected */
+    /* but it accomplished what I wanted */
+    color: rgba(16,43,31,0.63)(var(--primary-color)) !important;
+}
+.log-button {
+    background: none !important;
+}
+.log-button:hover, .log-button:hover * {
+    color: var(--text-color) !important;
+}
+#roam-right-sidebar-content > * > div {
+    background: #f9f9f9;
+}
+.rm-level1 div, .rm-level1 textarea {
+font-family:"微软雅黑", Times, serif !important;
+    font-size: 18px !important;
+    font-weight:bold !important;
+    color: #101010!important;
+    line-height: 1.5 !important;
+    text-shadow: 0px 1px 1px #7F7D7D;
+}
+/* 高亮、加粗、斜体、删除线样式*/
+.roam-highlight{
+	border-bottom:1.3px wavy;
+	color: #05990E;
+	font-weight:500 !important;
+	background-color:rgba(228,154,154,0.03);
+}
+
+b, strong {
+    color: #C54961 !important;
+    font-weight:bold!important;
+	text-shadow: 0px 0px 0px #9A9797BC;
+	font-size:15px;
+  	background-color:rgba(198,195,195,0);
+  border-radius:4px;
+  padding:0px 2px 0px 2px;
+  
+}
+em {
+	border-bottom:1.3px wavy;
+	color: rgb(8,119,238);
+    font-size: 16px !important;
+    font-weight:normal;
+    font-family:"微软雅黑", Times, serif !important;
+    border-left: 4px solid #0549BA !important;
+    padding-left:7px !important;
+      padding-right:7px !important;
+  background-color:#E6E9CB82;
+    font-style:normal;
+  border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+}
+del {
+  text-decoration: none!important;
+  color:#F7E11F !important;
+  background-color: #F7E11F !important;
+}
+del:hover{
+  color:blue !important;
+    text-decoration: none !important;
+    background-color: #DFF4C63b !important;
+}
+
+/* Hashtags */
+.rm-page-ref-tag {
+    color: #A29D9D !important;
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 1px 5px 2px;
+}
+/* 新改的，忘记作用了*/
+.rm-alias-block, .rm-alias-block:hover {
+    color: #464748!important;
+    font-weight:normal;
+	border-bottom:1.3px dashed;
+}
+.rm-alias-external, .rm-alias-external:hover {
+    color: #141515!important;
+    font-weight:normal;
+	border-bottom:1.3px solid;
+}
+
+
+.rm-level1 div, .rm-level1 textarea {
+    font-family: "微软雅黑", Times, serif !important;
+    font-size: 15px !important;
+    font-weight: normal !important;
+    color: #101010!important;
+    line-height: 1.5 !important;
+    text-shadow: 0px 0px 0px #c6c0c0;
+}
+.rm-level2 div, .rm-level2 textarea {
+      font-size: 18px !important;
+    line-height: 1.5 !important;
+  color:#161617!important;
+      font-weight: bold !important;
+      border-left: 0px solid #4CAF50 !important;
+    padding-left:0px !important;
+}
+.rm-level3 div, .rm-level3 textarea {
+      font-size: 18px !important;
+      line-height: 1.5 !important;
+      color:#161617!important;
+      font-weight: normal !important;
+      text-shadow: 0px 1px 2px #c6c0c0;
+}
+
+.roam-block {
+min-height: calc(1.5em + 1px);
+}
+
+span.rm-page-ref[data-tag="ing"] {
+    color: #121313 !important;
+   background-color:#CDDC39AF !important;
+}
+span.rm-page-ref[data-tag="ing"]:after {
+    content: " 📌"
+}
