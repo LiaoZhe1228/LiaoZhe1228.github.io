@@ -25,27 +25,9 @@ font-family:"微软雅黑", Times, serif !important;
     line-height: 1.5 !important;
     text-shadow: 0px 1px 1px #7F7D7D;
 }
-/* 删除线样式*/
 
-del {
-  text-decoration: none!important;
-  color:#F7E11F !important;
-  background-color: #F7E11F !important;
-}
-del:hover{
-  color:blue !important;
-    text-decoration: none !important;
-    background-color: #DFF4C63b !important;
-}
 
-/* Hashtags */
-.rm-page-ref-tag {
-    color: #A29D9D !important;
-    font-weight: 500;
-    background-color: transparent;
-    border-radius: 5px;
-    padding: 1px 5px 2px;
-}
+
 /* 新改的，忘记作用了*/
 .rm-alias-block, .rm-alias-block:hover {
     color: #464748!important;
