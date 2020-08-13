@@ -30,7 +30,7 @@ h1.level2, h1.level2 > a, h2.level2 > a {
     font-weight: bold !important;
     height: auto !important;
     line-height: 1.5 !important;
-}
+}POPOVER STYLES 
 h1.rm-title-display, .rm-title-textarea {
     margin-left: 20px;
 }
@@ -546,40 +546,7 @@ textarea, a {
 /*       POPOVER STYLES       */
 /* -------------------------- */
 
-.bp3-menu-divider {
-    border-color: rgba(255, 255, 255, 0.25) !important;
-}
-.bp3-text-small {
-    color: var(--text-color) !important;
-    opacity: 0.6;
-}
 
-
-.bp3-transition-container {
-    /* not very good at these z-indexes huh? */
-    z-index: 9999999999 !important;
-}
-.bp3-popover {
-    min-width: 230px; /* fix width */
-    pointer-events: none; /* prevent from getting in the way of hover*/
-}
-.bp3-popover .bp3-menu, .bp3-popover .bp3-popover-content {
-    pointer-events: auto;
-    background-color: var(--page-color) !important;
-}
-
-.bp3-popover .bp3-button {
-    background-color: var(--bg-color)
-}
-
-.bp3-popover .bp3-popover-arrow svg * {
-    fill: var(--page-color);
-}
-
-#app .bp3-popover .bp3-popover-arrow svg * {
-    fill: rgb(var(--color-secondary));
-    fill: var(--page-color);
-}
 
 /* what a mess! */
 
