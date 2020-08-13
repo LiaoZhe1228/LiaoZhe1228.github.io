@@ -593,31 +593,7 @@ textarea, a {
 }*/
 
 
-body > .bp3-portal .bp3-menu {
-    background-color: var(--page-color) !important;
-}
-body > .bp3-portal .bp3-popover-content, body > .bp3-portal .bp3-popover-content * {
-    color: var(--text-color) !important;
-}
 
-.bp3-popover .bp3-button, .bp3-popover .bp3-button * {
-    color: var(--text-color) !important;
-}
-
-
-body > .bp3-portal *[style*="rgba(72, 176, 240, 0.5)"] {
-    background-color: rgb(var(--color-primary)) !important;
-    color: var(--color-secondary-contrast) !important;
-}
-body > .bp3-portal *[style*="rgba(72, 176, 240, 0.5)"] > span::before, body > .bp3-portal *[style*="rgba(72, 176, 240, 0.5)"] * {
-    color: var(--color-secondary-contrast) !important;
-}
-body > .bp3-portal .bp3-menu-divider {
-    border-color: rgba(0, 0, 0, 0.2) !important;
-}
-body > .bp3-portal .bp3-text-small {
-    color: rgba(0, 0, 0, 0.5) !important;
-}
 
 .emoji-mart {
     border: none !important;
