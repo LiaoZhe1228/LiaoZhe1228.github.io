@@ -81,11 +81,6 @@ textarea, a {
     font-weight: bold;
 }
 
-.rm-page-ref, .rm-alias-page, .rm-alias-page:hover {
-    color: rgb(var(--color-primary)) !important;
-    font-weight: bold;
-}
-
 .rm-page-ref-tag {
     color: var(--color-primary-contrast) !important;
     background-color: rgb(var(--color-primary));
