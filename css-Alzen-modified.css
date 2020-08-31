@@ -20,25 +20,7 @@ a:hover {
 
 
 }
-.rm-alias-block, .rm-alias-block:hover {
-    color: #464748!important;
-    font-weight:normal;
-	border-bottom:1.3px dashed;
-}
-.rm-alias-external, .rm-alias-external:hover {
-    color: #141515!important;
-    font-weight:normal;
-	border-bottom:1.3px solid;
-}
 
-
-
-.rm-page-ref-link-color {
-    font-weight: 600;
-    color: rgb(1, 76, 69) !important;
-    border-radius: 5px;
-    padding: 1px 1px 1px 1px;
-}
 
 /* GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');	
