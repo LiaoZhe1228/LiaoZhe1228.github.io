@@ -17,12 +17,5 @@
 #roam-right-sidebar-content > * > div {
     background: #f9f9f9;
 }
-.rm-level1 div, .rm-level1 textarea {
-font-family:"微软雅黑", Times, serif !important;
-    font-size: 18px !important;
-    font-weight:bold !important;
-    color: #101010!important;
-    line-height: 1.5 !important;
-    text-shadow: 0px 1px 1px #7F7D7D;
-}
+
 
