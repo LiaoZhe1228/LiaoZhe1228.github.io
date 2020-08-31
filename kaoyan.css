@@ -26,23 +26,3 @@ font-family:"微软雅黑", Times, serif !important;
     text-shadow: 0px 1px 1px #7F7D7D;
 }
 
-
-
-/* 新改的，忘记作用了*/
-.rm-alias-block, .rm-alias-block:hover {
-    color: #464748!important;
-    font-weight:normal;
-	border-bottom:1.3px dashed;
-}
-.rm-alias-external, .rm-alias-external:hover {
-    color: #141515!important;
-    font-weight:normal;
-	border-bottom:1.3px solid;
-}
-
-
-
-.roam-block {
-min-height: calc(1.5em + 1px);
-}
-
