@@ -14,133 +14,6 @@ html, body, .roam-app {
     background: transparent; /* Chrome/Safari/Webkit */
 }
 
-
-.roam-topbar .bp3-icon-star::before {
-    color: rgb(var(--color-primary)) !important;
-    color: rgb(var(--color-secondary)) !important;
-}
-/* fix positioning problems with menu icon */
-.roam-topbar *[class*="icon-menu"]::before {
-    position: absolute !important;
-    top: 4px !important;
-    left: 4px !important;
-}
-.roam-topbar .bp3-icon-menu-open::before {
-    content: ""; /* prevent menu icon from changing on hover */
-}
-
-.roam-topbar {
-    opacity: 1 !important;
-    background-color: transparent !important;
-    
-    margin-top: 70px;
-    width: 20px;
-    display: inline-block;
-    padding-left: 0 !important;
-    position: relative !important;
-    
-    position: sticky !important;
-    left: 0px;
-    transition: none !important;
-    z-index: 999;
-    
-    border: none !important;
-}
-
-.roam-topbar > .flex-h-box {
-    width: 50px;
-    flex-direction: column;
-    height: 1px !important;
-    align-items: start !important;
-    text-align: center;
-    
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    left: 0px;
-}
-.roam-topbar > .flex-h-box > * {
-    flex: 0 0 20px !important;
-    margin: auto !important;
-    max-width: 20px !important;
-    max-height: 20px !important;
-}
-.roam-topbar > div >.bp3-button:first-child {
-    align-self: start !important;
-    position: fixed !important;
-    left: 16px;
-    top: 78px;
-    z-index: 9999999 !important;
-}
-.roam-topbar > div > *:nth-child(2) {
-    margin-top:20px !important;
-}
-
-
-
-
-.roam-topbar .bp3-icon-search {
-    padding: 4px;
-    border-radius: 3px;
-    margin: 0 !important;
-    cursor: pointer;
-}
-
-/* style contains `200px` if search bar is NOT selected */
-/* hovering search bar in this mode == hovering icon itself */
-/* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
-/* very hacky :P */
-.rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .roam-topbar .bp3-icon-search:hover {
-    background-color: rgba(var(--color-primary), 0.4);
-    color: var(--text-color) !important;
-}
-.roam-topbar .bp3-icon-search svg { padding: 1px; }
-/* fix centering on calendar icon */
-.roam-topbar .bp3-icon-calendar { margin: 0 !important }
-
-
-
-
-
-@media only screen and (max-width: 600px) {
-    .roam-topbar {
-        margin: 0px !important;
-        padding: 10px 0px 0px 0px !important;
-        width: 100%;
-        justify-content: center;
-        position: fixed !important;
-        top: 0px;
-        left: 0px;
-        backdrop-filter: blur(5px);
-    }
-    .roam-topbar::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background-color: var(--bg-color) !important;
-        opacity: 0.7;
-        
-    }
-    .roam-topbar > .flex-h-box {
-        flex-direction: row;
-        height: 1px !important;
-        align-items: start !important;
-        text-align: center;
-
-        /*position: -webkit-sticky !important;
-        position: fixed !important;
-        left: 0px;
-        top: 0;*/
-        position: relative !important;
-        width: 300px !important;
-        margin: auto;
-        justify-content: space-evenly;
-    }
-    .roam-topbar > div >.bp3-button:first-child {
-        position: static !important;
-    }
-
-
 /* hide scrollbars */
 * {
     scrollbar-width: none; /* Firefox */
@@ -157,7 +30,7 @@ h1.level2, h1.level2 > a, h2.level2 > a {
     font-weight: bold !important;
     height: auto !important;
     line-height: 1.5 !important;
-}POPOVER STYLES 
+}
 h1.rm-title-display, .rm-title-textarea {
     margin-left: 20px;
 }
@@ -204,6 +77,11 @@ textarea, a {
 }
 
 .rm-alias-block, .rm-alias-block:hover {
+    color: rgb(var(--color-primary)) !important;
+    font-weight: bold;
+}
+
+.rm-page-ref, .rm-alias-page, .rm-alias-page:hover {
     color: rgb(var(--color-primary)) !important;
     font-weight: bold;
 }
@@ -450,6 +328,20 @@ textarea, a {
 }
 
 
+.roam-topbar .bp3-icon-star::before {
+    color: rgb(var(--color-primary)) !important;
+    color: rgb(var(--color-secondary)) !important;
+}
+/* fix positioning problems with menu icon */
+.roam-topbar *[class*="icon-menu"]::before {
+    position: absolute !important;
+    top: 4px !important;
+    left: 4px !important;
+}
+.roam-topbar .bp3-icon-menu-open::before {
+    content: ""; /* prevent menu icon from changing on hover */
+}
+
 /* -------------------------- */
 /*        LEFT SIDEBAR        */
 /* -------------------------- */
@@ -483,6 +375,23 @@ textarea, a {
 }
 
 
+.roam-topbar {
+    opacity: 1 !important;
+    background-color: transparent !important;
+    
+    margin-top: 70px;
+    width: 20px;
+    display: inline-block;
+    padding-left: 0 !important;
+    position: relative !important;
+    
+    position: sticky !important;
+    left: 0px;
+    transition: none !important;
+    z-index: 999;
+    
+    border: none !important;
+}
 .roam-sidebar-container > .roam-sidebar-content::before {
     content: "";
     position: absolute;
@@ -551,7 +460,33 @@ textarea, a {
     top: 5px;
 }
 
-
+.roam-topbar > .flex-h-box {
+    width: 50px;
+    flex-direction: column;
+    height: 1px !important;
+    align-items: start !important;
+    text-align: center;
+    
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    left: 0px;
+}
+.roam-topbar > .flex-h-box > * {
+    flex: 0 0 20px !important;
+    margin: auto !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+}
+.roam-topbar > div >.bp3-button:first-child {
+    align-self: start !important;
+    position: fixed !important;
+    left: 16px;
+    top: 78px;
+    z-index: 9999999 !important;
+}
+.roam-topbar > div > *:nth-child(2) {
+    margin-top:20px !important;
+}
 
 
 
@@ -571,7 +506,24 @@ textarea, a {
 
 /* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS */
 
+.roam-topbar .bp3-icon-search {
+    padding: 4px;
+    border-radius: 3px;
+    margin: 0 !important;
+    cursor: pointer;
+}
 
+/* style contains `200px` if search bar is NOT selected */
+/* hovering search bar in this mode == hovering icon itself */
+/* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
+/* very hacky :P */
+.rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .roam-topbar .bp3-icon-search:hover {
+    background-color: rgba(var(--color-primary), 0.4);
+    color: var(--text-color) !important;
+}
+.roam-topbar .bp3-icon-search svg { padding: 1px; }
+/* fix centering on calendar icon */
+.roam-topbar .bp3-icon-calendar { margin: 0 !important }
 
 .rm-find-or-create-wrapper {
     width: 20px !important;
@@ -594,7 +546,40 @@ textarea, a {
 /*       POPOVER STYLES       */
 /* -------------------------- */
 
+.bp3-menu-divider {
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+.bp3-text-small {
+    color: var(--text-color) !important;
+    opacity: 0.6;
+}
 
+
+.bp3-transition-container {
+    /* not very good at these z-indexes huh? */
+    z-index: 9999999999 !important;
+}
+.bp3-popover {
+    min-width: 230px; /* fix width */
+    pointer-events: none; /* prevent from getting in the way of hover*/
+}
+.bp3-popover .bp3-menu, .bp3-popover .bp3-popover-content {
+    pointer-events: auto;
+    background-color: var(--page-color) !important;
+}
+
+.bp3-popover .bp3-button {
+    background-color: var(--bg-color)
+}
+
+.bp3-popover .bp3-popover-arrow svg * {
+    fill: var(--page-color);
+}
+
+#app .bp3-popover .bp3-popover-arrow svg * {
+    fill: rgb(var(--color-secondary));
+    fill: var(--page-color);
+}
 
 /* what a mess! */
 
@@ -608,7 +593,31 @@ textarea, a {
 }*/
 
 
+body > .bp3-portal .bp3-menu {
+    background-color: var(--page-color) !important;
+}
+body > .bp3-portal .bp3-popover-content, body > .bp3-portal .bp3-popover-content * {
+    color: var(--text-color) !important;
+}
 
+.bp3-popover .bp3-button, .bp3-popover .bp3-button * {
+    color: var(--text-color) !important;
+}
+
+
+body > .bp3-portal *[style*="rgba(72, 176, 240, 0.5)"] {
+    background-color: rgb(var(--color-primary)) !important;
+    color: var(--color-secondary-contrast) !important;
+}
+body > .bp3-portal *[style*="rgba(72, 176, 240, 0.5)"] > span::before, body > .bp3-portal *[style*="rgba(72, 176, 240, 0.5)"] * {
+    color: var(--color-secondary-contrast) !important;
+}
+body > .bp3-portal .bp3-menu-divider {
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+body > .bp3-portal .bp3-text-small {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
 
 .emoji-mart {
     border: none !important;
@@ -977,7 +986,28 @@ canvas[data-id="layer2-node"] {
     border-radius: 10px;
 }
 
+
+/* QUERY */
+
+.rm-query {
+  border: 0.5px solid #38332e;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-radius: 10px;
+}
+
+.rm-query .rm-query-title {
+  background-color: #38332e;
+  font-size: .8em;
+}
+
 /* CHECKBOX */
+
+.check-container {
+    padding-right: 2px;
+    vertical-align: text-bottom;
+    top: -5px;
+}
 
 .check-container .checkmark {
     width: 14px;
@@ -1212,6 +1242,46 @@ code {
 /*         MOBILE             */
 /* -------------------------- */
 
+
+
+@media only screen and (max-width: 600px) {
+    .roam-topbar {
+        margin: 0px !important;
+        padding: 10px 0px 0px 0px !important;
+        width: 100%;
+        justify-content: center;
+        position: fixed !important;
+        top: 0px;
+        left: 0px;
+        backdrop-filter: blur(5px);
+    }
+    .roam-topbar::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: var(--bg-color) !important;
+        opacity: 0.7;
+        
+    }
+    .roam-topbar > .flex-h-box {
+        flex-direction: row;
+        height: 1px !important;
+        align-items: start !important;
+        text-align: center;
+
+        /*position: -webkit-sticky !important;
+        position: fixed !important;
+        left: 0px;
+        top: 0;*/
+        position: relative !important;
+        width: 300px !important;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+    .roam-topbar > div >.bp3-button:first-child {
+        position: static !important;
+    }
     
     .roam-sidebar-container {
         padding-right: 0;
