@@ -124,6 +124,12 @@
 
 
 
+/* Original Dark Age theme by @shodty */
+/* Love this theme? Say thanks via Paypal: https://paypal.me/RobertLandsburg */
+
+/*---------------------------------------------------------------------------*/
+/* MAIN BODY AND BLOCK COLORS */
+
 .roam-body-main,
 body {
   background-color: var(--background) !important;
@@ -135,7 +141,7 @@ body {
   border-radius: 12px !important;
   background   : var(--background) !important;
   margin-right : 6px !important;
-  margin-left  : 6px !important;
+  margin-left  : 9px !important;
 }
 
 .roam-block > span > div {
@@ -146,7 +152,7 @@ body {
   background-color: var(--bullets) !important;
 }
 
-.rm-bullet--closed .rm-bullet__inner{
+.rm-bullet--closed .rm-bullet__inner {
   border: 4px solid var(--closed-bullets) !important;
 }
 
@@ -216,10 +222,6 @@ body {
   border-bottom: 1.5px solid var(--block-reference-text) !important;
   z-index      : 1000 !important;
   transition   : color 0.3s ease, border 0.3s ease !important;
-}
-
-.rm-block-ref dont-focus-block {
-  font-size: var(--main-font-size) !important;
 }
 
 .rm-block-ref,
@@ -293,9 +295,9 @@ Original BetterRoam theme by @linuz90
 Love this theme? Say thanks via Paypal: https://www.paypal.me/linuz90 UPDATE */
 
 .roam-article {
-  padding-left : 20px !important;
-  padding-top  : 0 !important;
-  padding-right: 20px !important;
+  padding-left : 30px !important;
+  padding-top  : 10px !important;
+  padding-right: 30px !important;
 }
 
 .roam-app,
@@ -444,19 +446,17 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
 }
 
-div {
-  font-size: var(--main-font-size) !important;
-}
-
+.rm-italics,
 em {
   color: var(--italics-color);
 }
 
+.rm-bold,
 strong {
   color: var(--bold-color);
 }
 
-/* Heading Sizes */
+/* Headings */
 h1 {
   font-size: var(--page-head-font-size) !important;
 }
@@ -469,8 +469,10 @@ h1 {
   font-size: var(--h2-font-size) !important;
 }
 
+.rm-heading-level-3 > .rm-block__self .rm-block__input,
 .rm-level3 {
   font-size: var(--h3-font-size) !important;
+  color    : var(--body-text) !important;
 }
 
 /* Right sidebar h1 */
@@ -536,31 +538,48 @@ h3 {
 
 /* Main link coloring + hover */
 a {
-  color     : var(--external-links) !important;
+  color     : var(--external-links);
+  transition: color 0.3s ease;
+}
+
+.rm-alias--block {
+  color          : var(--page-links);
+  transition     : color 0.3s ease;
+  text-decoration: underline dotted var(--references);
+  font-style     : italic;
+}
+
+.rm-alias--page {
+  color     : var(--page-links);
+  transition: color 0.3s ease;
+  font-style: italic;
+}
+
+.rm-alias--external {
+  color     : var(--external-links);
   transition: color 0.3s ease;
 }
 
 /* Internal Roam Links [[Roam]] & #Roam & #[[Roam]] */
 .bp3-text-overflow-ellipsis a,
-.rm-pages-title-text strong,
-.rm-ref-page-view-title a {
-  color      : var(--page-links) !important;
-  font-weight: 700;
-  transition : color 0.3s ease;
-}
-
-.rm-page-ref,
-.rm-page-ref-link-color {
+.rm-pages-title-text strong {
   color      : var(--page-links) !important;
   font-weight: 500;
   transition : color 0.3s ease;
 }
 
-.rm-page-ref-brackets {
+.rm-page-ref,
+.rm-page-ref--link {
+  color      : var(--page-links) !important;
+  font-weight: 500;
+  transition : color 0.3s ease;
+}
+
+.rm-page-ref__brackets {
   color: var(--references);
 }
 
-.rm-page-ref-tag {
+.rm-page-ref--tag {
   color        : var(--hashtags) !important;
   font-weight  : 500;
   padding-left : 2px;
@@ -568,7 +587,7 @@ a {
   transition   : color 0.3s ease;
 }
 
-.rm-page-ref-tag:hover,
+.rm-page-ref--tag:hover,
 .rm-page-ref:hover,
 .rm-pages-title-text strong:hover {
   color          : var(--links-hover) !important;
@@ -616,7 +635,7 @@ h4.level4 a:hover {
   font-weight: 500;
 }
 
-.rm-page-ref-link-color:hover,
+.rm-page-ref--link:hover,
 a:focus,
 a:hover {
   color          : var(--links-hover) !important;
@@ -632,21 +651,21 @@ a:hover {
 
 /* Namespace text color [[roam/css]] when using CTRL+C CTRL+L || CMD+C CMD+L */
 
-.rm-page-ref-namespace-color {
+.rm-page-ref--namespace {
   color      : var(--namespaces) !important;
   font-weight: 600;
   transition : color 0.3s ease;
 }
 
-.rm-page-ref-namespace-color:hover {
+.rm-page-ref--namespace:hover {
   color          : var(--links-hover);
   text-decoration: none;
   transition     : color 0.3s ease;
 }
 
 /* Highlights */
-.roam-highlight,
-.roam-highlight:hover {
+.rm-highlight,
+.rm-highlight:hover {
   color           : var(--highlight-text-color) !important;
   background-color: var(--highlighter);
 }
@@ -656,9 +675,9 @@ a:hover {
 }
 
 /* highlight adjustments */
-.roam-highlight .rm-page-ref-brackets,
-.roam-highlight .rm-page-ref-link-color,
-.roam-highlight .rm-page-ref-tag,
+.rm-highlight .rm-page-ref--link,
+.rm-highlight .rm-page-ref--tag,
+.rm-highlight .rm-page-ref__brackets,
 .roam-highlight em,
 .roam-highlight strong {
   background-color: var(--background) !important;
@@ -939,7 +958,7 @@ div[style*="background: rgb(255, 243, 205);"] {
 
 /* Path text color for Linked References */
 .parent-path-wrapper {
-  color: var(--references);
+  color: var(--body-text);
 }
 
 /* Unlinked References */
@@ -1724,7 +1743,7 @@ body > div:nth-child(10) > div > div > div > button > span > svg > path {
 
 /* {{or}} dropdown */
 
-div:not(.bp3-datepicker-month-select):not(.bp3-datepicker-year-select):not(.flatpickr-monthDropdown-months) > select {
+div:not(.bp3-datepicker-month-select):not(.bp3-datepicker-year-select):not(.flatpickr-current-month) > select {
   background-color: var(--sidebar-background) !important;
   color           : var(--italics-color);
   font-style      : italic;
@@ -1766,45 +1785,46 @@ span[style*="color: rgb(167, 182, 194);"] {
   border-left-color: var(--references);
   font-family      : var(--header-font) !important;
   width            : 100% !important;
-  margin           : 0px !important;
-  padding-top      : 0px;
-  padding-bottom   : 0px;
+  margin           : 0 !important;
+  padding-top      : 0;
+  padding-bottom   : 0;
 }
 
-.rm-bq::before{
-  content: "❝\A";
+.rm-bq::before {
+  content    : "❝\A";
   white-space: pre;
-  font-size: 100%;
-  color: var(--references);
+  font-size  : 100%;
+  color      : var(--references);
 }
 
-.rm-bq::after{
-  content: "\A❞";
+.rm-bq::after {
+  content    : "\A❞";
   white-space: pre;
-  color: var(--references);
-  font-size: 100%;
+  color      : var(--references);
+  font-size  : 100%;
 }
 /*---------------------------------------------------------------------------*/
 /* Smaller bullet tooltips */
 .rm-bullet__tooltip {
   font-size: 10px !important;
-  color: var(--body-text) !important;
+  color    : var(--body-text) !important;
 }
+
 .bp3-popover-content {
   padding: 5px !important;
 }
 /*---------------------------------------------------------------------------*/
 /* Better Quick Capture Sync Modal */
 .rm-quick-capture-sync-modal {
-  border-radius: 5px !important;
+  border-radius   : 5px !important;
   background-color: var(--sidebar-background) !important;
 }
 
 .bp3-button.bp3-intent-primary.bp3-large {
-  color: var(--body-text) !important;
+  color           : var(--body-text) !important;
   background-color: #D9822B !important;
-  border: none !important;
-  box-shadow: none !important;
+  border          : none !important;
+  box-shadow      : none !important;
 }
 
 .bp3-button.bp3-intent-primary.bp3-large:hover {
@@ -1812,19 +1832,19 @@ span[style*="color: rgb(167, 182, 194);"] {
 }
 
 #quick-capture-history {
-  color: var(--bold-color) !important;
-  font-size: 16px !important;
-  width: 90% !important;
-  padding: 20px !important;
-  border-radius: 5px !important;
+  color           : var(--bold-color) !important;
+  font-size       : 16px !important;
+  width           : 90% !important;
+  padding         : 20px !important;
+  border-radius   : 5px !important;
   background-color: var(--background) !important;
-  opacity: 1 !important;
+  opacity         : 1 !important;
 }
 
 #quick-capture-history .level3 {
-  color: var(--page-links) !important;
+  color      : var(--page-links) !important;
   font-family: var(--header-font) !important;
-  font-size: 20px !important;
+  font-size  : 20px !important;
 }
 
 #quick-capture-history > div > li {
@@ -1834,5 +1854,62 @@ span[style*="color: rgb(167, 182, 194);"] {
 /* HR line styling */
 .rm-hr {
   border-color: var(--references);
+}
+/*---------------------------------------------------------------------------*/
+/* In-line comments */
+.rm-paren {
+  color           : var(--body-text);
+  background-color: var(--kanban-column-background);
+  border          : none;
+  border-radius   : 8px;
+  padding         : 2px 5px 4px;
+  transition      : color 0.3s ease;
+}
+
+.rm-spacer {
+  font-size: 1.1em;
+  position : relative;
+  top      : 2px;
+  color    : var(--references);
+}
+
+.rm-spacer:hover {
+  color: var(--links-hover);
+}
+
+.rm-paren__paren {
+  color: var(--references);
+}
+
+.rm-paren__paren--left {
+  padding-right: 3px;
+}
+
+.rm-paren__paren--right {
+  padding-left: 3px;
+}
+
+.rm-paren__paren:hover {
+  color           : var(--links-hover);
+  background-color: transparent;
+}
+
+.rm-paren:hover {
+  cursor          : crosshair;
+  background-color: var(--kanban-column-background);
+}
+/*---------------------------------------------------------------------------*/
+/* Resize styling */
+
+.rm-resize-handle:hover {
+  border-left: dashed var(--icons-hover) !important;
+  opacity    : 0.5 !important;
+  transition : border 0.3s ease;
+}
+
+div::-webkit-resizer {
+  border-style    : solid;
+  border-color    : transparent var(--references) var(--references) transparent;
+  background-color: var(--background);
 }
 /*---------------------------------------------------------------------------*/
